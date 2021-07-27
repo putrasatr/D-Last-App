@@ -19,14 +19,14 @@ export const style = StyleSheet.create({
         fontSize: 16,
         color: COLOR.BLACK,
         fontFamily: 'Cochin',
-        flexWrap:'wrap'
+        flexWrap: 'wrap'
     },
     LOKLL_HOME: {
         alignItems: 'center',
         borderRadius: 20,
         width: '30%'
     },
-    ScrollMerchant: { 
+    ScrollMerchant: {
         backgroundColor: COLOR.WHITE,
         paddingTop: 10,
         borderBottomColor: COLOR.GREY,
@@ -51,7 +51,7 @@ export const style = StyleSheet.create({
         alignItems: 'center',
         zIndex: 2,
         flexGrow: 1,
-        backgroundColor:COLOR.GRAY
+        backgroundColor: COLOR.GRAY
     },
     IMGMKN: {
         width: '100%',
@@ -105,6 +105,7 @@ export const style = StyleSheet.create({
     },
     imagenya: {
         width: '70%',
+        backgroundColor: "white",
         height: '70%'
     }
 })
