@@ -17,13 +17,10 @@ export default function Router() {
             initialRouteName="Home"
             activeColor={COLOR.MAIN_COLOR}
             inactiveColor={COLOR.GRAY}
-            barStyle=
-            {
-                {
-                    backgroundColor: "white",
-                    padding: 5
-                }
-            }
+            barStyle={{
+                backgroundColor: "white",
+                padding: 5
+            }}
         >
             <Tab.Screen
                 name="Home"

@@ -134,7 +134,7 @@ function* login(payload) {
         yield put(actions.loginSuccess(data.data))
         navigation.reset({
             index: 0,
-            routes: [{ name: 'Tab Navigator' }],
+            routes: [{ name: 'HomeScreen' }],
         })
     } catch (error) {
         console.log(error)
