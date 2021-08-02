@@ -11,6 +11,7 @@ import Router from './src/router/navigation/AppNavigator'
 import { NavigationContainer } from '@react-navigation/native';
 import { Provider } from 'react-redux'
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import RNBootSplash from "react-native-bootsplash";
 
 import rootReducer from './src/redux/reducers';
 import { createStore, applyMiddleware, compose } from 'redux';
@@ -25,6 +26,9 @@ const store = createStore(rootReducer, enhancer);
 sagaMiddleware.run(rootSaga);
 
 const App = () => {
+  React.useEffect(async () => {
+    await RNBootSplash.hide({ fade: true })
+  })
   return (
     <ContextProvider>
       <SafeAreaProvider>
