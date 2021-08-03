@@ -1,10 +1,15 @@
-const favorite = (state = { data: [], id: '' }, action) => {
-    switch (action.type) {
+const initialState = {
+    data: [],
+    id: ''
+}
+const favorite = (state = initialState, action) => {
+    const { type, data, id } = action
+    switch (type) {
         case 'LOAD_FAVORITE_SUCCESS':
             return {
                 ...state,
                 data: action.data.data.filter((item) => {
-                    return item.favorite !== 'null' 
+                    return item.favorite !== 'null'
                 })
             }
 
@@ -14,7 +19,7 @@ const favorite = (state = { data: [], id: '' }, action) => {
         case 'ADD_FAVORITE_SUCCESS':
             return {
                 ...state,
-                id: action.id
+                id
             }
 
         case 'ADD_FAVORITE_FAILURE':
